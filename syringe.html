@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>syringe</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        position: absolute;
+      }
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: steelblue;
+        font-family: '微軟正黑體';
+        font-weight: 900;
+      }
+
+      .syringe {
+        width: 560px;
+        height: 136px;
+        border-radius: 3px;
+        border: 1px solid #666;
+        background: linear-gradient(90deg, #fff 50%, #fcfca8 50%);
+        position: relative;
+      }
+      .syringe::before {
+        content: '';
+        width: 1px;
+        height: 20px;
+        background-color: #666;
+        top: 0;
+        left: 20px;
+        box-shadow: 20px 0 0 #666, 40px 0 0 #666, 40px 0 0 #666, 60px 0 0 #666, 80px 0 0 #666, 100px 0 0 #666,
+          120px 0 0 #666, 140px 0 0 #666, 160px 0 0 #666, 180px 0 0 #666, 200px 0 0 #666, 220px 0 0 #666, 240px 0 0 #666,
+          260px 0 0 #666, 280px 0 0 #666, 300px 0 0 #666, 320px 0 0 #666, 340px 0 0 #666, 360px 0 0 #666, 380px 0 0 #666,
+          400px 0 0 #666, 420px 0 0 #666, 440px 0 0 #666, 460px 0 0 #666, 480px 0 0 #666, 500px 0 0 #666, 520px 0 0 #666;
+      }
+      .syringe::after {
+        content: 'Made in Taiwan';
+        bottom: 1%;
+        left: 2px;
+        color: #999;
+      }
+
+      .needle,
+      .needle::before {
+        top: 50%;
+        right: 0;
+        transform: translate(100%, -50%);
+      }
+      .needle {
+        width: 66px;
+        height: 92px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border: 1px solid #666;
+        background-color: #fff;
+        position: absolute;
+      }
+      .needle::before {
+        content: '';
+        width: 115px;
+        border: 1px solid #333;
+      }
+
+      .syringe-piston,
+      .syringe-piston::before {
+        border: 1px solid #666;
+        background-color: #fff;
+        top: 50%;
+        left: 0;
+      }
+      .syringe-piston {
+        width: 66px;
+        height: 92px;
+        position: absolute;
+        transform: translate(-100%, -50%);
+      }
+      .syringe-piston::before {
+        content: '';
+        width: 56px;
+        height: 130px;
+        border-radius: 15% 15% 15% 15%;
+        transform: translate(-98%, -50%);
+      }
+
+      .piston {
+        width: 10%;
+        height: 100%;
+        background-color: #222;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .shadow {
+        width: 745px;
+        height: 100%;
+        background: linear-gradient(transparent, rgba(100, 99, 99, 0.3) 60%, transparent);
+        position: absolute;
+        left: -121px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="syringe">
+      <div class="needle"></div>
+      <div class="syringe-piston"></div>
+      <div class="piston"></div>
+      <div class="shadow"></div>
+    </div>
+  </body>
+</html>
