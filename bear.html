@@ -82,13 +82,13 @@
       }
 
       .mouth {
-        width: 165px;
-        height: 110px;
+        width: 175px;
+        height: 115px;
         border-radius: 100%;
         background-color: #fff;
         position: absolute;
         left: 50%;
-        top: 55%;
+        top: 53%;
         transform: translate(-50%, -50%);
       }
       .mouth::before,
@@ -99,38 +99,42 @@
         transform: translateX(-50%);
       }
       .mouth::before {
-        width: 45px;
-        height: 30px;
+        width: 40px;
+        height: 25px;
         top: 10%;
       }
       .mouth::after {
         width: 100px;
-        height: 35px;
+        height: 38px;
         top: 50%;
       }
 
       .v {
-        width: 200px;
-        height: 60px;
+        width: 180px;
+        height: 55px;
         background-color: #fff;
         border-radius: 0;
+        border-left: 60px solid #000;
+        border-right: 60px solid #000;
+        border-top: 55px solid #fff;
         position: absolute;
         left: 50%;
-        bottom: 8%;
+        bottom: 10%;
         transform: translateX(-50%);
-        border-left: 70px solid #000;
-        border-right: 70px solid #000;
-        border-top: 60px solid #fff;
       }
       .v::after {
         content: '';
-        width: 100px;
-        height: 30px;
-        background-color: cornflowerblue;
+        width: 130px;
+        height: 55px;
+        background-color: transparent;
         border-radius: 0;
+        border-left: 65px solid transparent;
+        border-right: 65px solid  transparent;
+        border-top: 55px solid  #000;
         left: 50%;
-        bottom: 80%;
+        bottom: 18px;
         transform: translateX(-50%);
+
       }
     </style>
   </head>
